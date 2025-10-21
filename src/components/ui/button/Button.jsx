@@ -11,8 +11,8 @@ import styles from "./Button.module.css";
 
 export const Button = ({ mode = "primary", text = "", fullWidth = false, href }) => {
   return href ? (
-    <a className={styles.link} href={href} target="_blank" rel="noopener">
-      <button className={`${styles.button} ${styles[mode]}`}>{text}</button>
+    <a className={`${styles.button} ${styles[mode]} ${fullWidth ? styles.fullWidth : ""}`} href={href} target="_blank" rel="noopener">
+      {text}
     </a>
   ) : (
     <button className={`${styles.button} ${styles[mode]} ${fullWidth ? styles.fullWidth : ""}`}>{text}</button>

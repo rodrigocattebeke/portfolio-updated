@@ -1,6 +1,9 @@
 .button {
+  display: flex;
   width: fit-content;
-  height: auto;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
   min-height: 2.81rem;
   font-size: 1rem;
   border-radius: 0.5rem;
@@ -9,17 +12,19 @@
   cursor: pointer;
   transition: 0.1s;
   color: var(--color-text-primary);
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 .button.primary {
   background-color: var(--color-accent);
 }
 
-.button.primar:hover {
+.button.primary:hover {
   background-color: var(--color-accent-hover);
 }
 
-.button.primar:active {
+.button.primary:active {
   background-color: var(--color-accent-active);
 }
 
@@ -35,6 +40,6 @@
   background-color: var(--color-bg-secondary-active);
 }
 
-.button.fullWidth {
+.fullWidth {
   width: 100%;
 }
