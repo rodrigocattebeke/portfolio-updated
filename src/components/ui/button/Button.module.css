@@ -1,0 +1,40 @@
+.button {
+  width: fit-content;
+  height: auto;
+  min-height: 2.81rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.1s;
+  color: var(--color-text-primary);
+}
+
+.button.primary {
+  background-color: var(--color-accent);
+}
+
+.button.primar:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.button.primar:active {
+  background-color: var(--color-accent-active);
+}
+
+.button.secondary {
+  background-color: var(--color-bg-secondary);
+}
+
+.button.secondary:hover {
+  background-color: var(--color-bg-secondary-hover);
+}
+
+.button.secondary:active {
+  background-color: var(--color-bg-secondary-active);
+}
+
+.button.fullWidth {
+  width: 100%;
+}
