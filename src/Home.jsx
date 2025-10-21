@@ -1,3 +1,9 @@
+import { Chat } from "./components/icons/Chat";
+import { Public } from "./components/icons/Public";
+import { Work } from "./components/icons/Work";
+import { Button } from "./components/ui/button/Button";
+import { InfoItem } from "./components/ui/infoItem/InfoItem";
+
 export function Home() {
   return (
     <>
@@ -13,14 +19,22 @@ export function Home() {
           </h1>
           <p className="heroRole">Desarrollador Front-End | Transformando ideas en experiencias interactivas</p>
           <p className="heroDescription">Creo aplicaciones web modernas y responsivas usando React, Next.js y otras tecnologías actuales. Disfruto diseñando interfaces limpias y dando vida a las ideas con código.</p>
-          <div className="heroButtonsContainer"></div>
+          <div className="heroButtonsContainer">
+            <Button text="Ver mis proyectos" fullWidth={true} href={"hasd"} />
+            <Button text="Contáctame" mode="secondary" fullWidth={true} />
+          </div>
         </div>
       </section>
-      <section className="AboutMe ">
+      <section className="aboutMe ">
         <h2 className="sectionTitle">Sobre Mi</h2>
-        <p className="description">Soy un desarrollador front-end enfocado en la construcción de experiencias web modernas, funcionales y bien estructuradas.Trabajo con Next.js y React, buscando siempre mejorar la calidad del código y aprovechar al máximo las herramientas del ecosistema.Me apasiona seguir aprendiendo, descubrir nuevas tecnologías y crecer con cada proyecto para alcanzar un desarrollo cada vez más profesional.</p>1 skill 2skill 3skill
+        <p className="description">Soy un desarrollador front-end enfocado en la construcción de experiencias web modernas, funcionales y bien estructuradas.Trabajo con Next.js y React, buscando siempre mejorar la calidad del código y aprovechar al máximo las herramientas del ecosistema.Me apasiona seguir aprendiendo, descubrir nuevas tecnologías y crecer con cada proyecto para alcanzar un desarrollo cada vez más profesional.</p>
+        <div className="aboutMeInfoItemsContainer">
+          <InfoItem icon={Work} title="Experiencia" description="Trainee" />
+          <InfoItem icon={Public} title="Ubicación" description="Paraguay" />
+          <InfoItem icon={Chat} title="Idiomas" description="Español" />
+        </div>
       </section>
-      <section className="Skills">
+      <section className="skills">
         <h2 className="sectionTitle">Mis Habilidades y Herramientas</h2>
         <p className="skillsDescription">Tecnologías que uso para dar vida a mis ideas</p>
         <div className="skillsContainer"></div>
