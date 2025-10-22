@@ -114,3 +114,15 @@ section {
   gap: 1.38rem;
   margin-top: 1rem;
 }
+
+/*      Skills      */
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skillsDescription {
+  width: 100%;
+  text-align: center;
+}
