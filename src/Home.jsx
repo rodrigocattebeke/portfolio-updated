@@ -12,6 +12,10 @@ import { InfoItem } from "./components/ui/infoItem/InfoItem";
 import { Skill } from "./components/ui/skill/Skill";
 
 export function Home() {
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <header></header>
@@ -57,12 +61,14 @@ export function Home() {
         <h2 className="sectionTitle">Contáctame</h2>
         <p className="description"></p>
         <div className="contactFormContainer">
-          <form className="contactForm">
-            <input name="name" placeholder="Tu nombre"></input>
-            <input name="email" placeholder="Tu email"></input>
+          <form className="contactForm" onSubmit={onSubmit}>
+            <input name="name" placeholder="Tu nombre" autoComplete="name"></input>
+            <input name="email" placeholder="Tu email" autoComplete="email"></input>
             <textarea name="message" placeholder="Tu mensaje"></textarea>
+            <div className="contactFormButton">
+              <Button text="Enviar mensaje" fullWidth="true" />
+            </div>
           </form>
-          <button>Enviar mensaje</button>
         </div>
       </section>
       <section className="linksIcons">
