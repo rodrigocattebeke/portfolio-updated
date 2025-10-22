@@ -3,7 +3,10 @@ import { Chat } from "./components/icons/Chat";
 import { CSS } from "./components/icons/CSS";
 import { Figma } from "./components/icons/Figma";
 import { Git } from "./components/icons/Git";
+import { Github } from "./components/icons/Github";
 import { JavaScript } from "./components/icons/JavaScript";
+import { Linkedin } from "./components/icons/Linkedin";
+import { Mail } from "./components/icons/Mail";
 import { NextJs } from "./components/icons/NextJs";
 import { Public } from "./components/icons/Public";
 import { Work } from "./components/icons/Work";
@@ -72,9 +75,15 @@ export function Home() {
         </div>
       </section>
       <section className="linksIcons">
-        <p>github</p>
-        <p>linkedin</p>
-        <p>email</p>
+        <a href="https://github.com/rodrigocattebeke" rel="noopener" target="_blank">
+          <Github width="2.2rem" height="2.2rem" />
+        </a>
+        <a href="#">
+          <Linkedin width="2.2rem" height="2.2rem" />
+        </a>
+        <a href="mailto:rodrigocattebekedev@gmail.com?subject=Trabajo&body=Hola,%20me%20estoy%20contactando%20para%20un%20trabajo.">
+          <Mail width="2.9rem" height="2.9rem" />
+        </a>
       </section>
     </>
   );

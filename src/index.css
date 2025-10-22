@@ -39,6 +39,7 @@ p {
 
 svg {
   fill: var(--color-accent);
+  transition: 0.15s;
 }
 
 section {
@@ -174,4 +175,22 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
+}
+
+/**   Links icons   **/
+.linksIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.linksIcons a {
+  display: inline;
+  width: fit-content;
+}
+
+.linksIcons svg:hover {
+  fill: var(--color-accent-hover);
 }
