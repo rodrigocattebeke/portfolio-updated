@@ -9,11 +9,16 @@
   --color-bg-secondary-hover: #192a3d;
   --color-border: #123143;
   --color-text-primary: #e0f7f4;
+  --color-text-primary-hover: #bec8c7;
   --color-text-secondary: #a0dad4;
   --color-text-disabled: #969696;
 }
 
 /* Reset */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -39,7 +44,7 @@ p {
 
 svg {
   fill: var(--color-accent);
-  transition: 0.15s;
+  transition: fill 0.15s;
 }
 
 section {
@@ -193,4 +198,36 @@ textarea {
 
 .linksIcons svg:hover {
   fill: var(--color-accent-hover);
+}
+
+/*      footer      */
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.footerDevName {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.footerLinks a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footerLinks a:hover {
+  color: var(--color-text-primary-hover);
 }

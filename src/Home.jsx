@@ -22,7 +22,7 @@ export function Home() {
   return (
     <>
       <header></header>
-      <section className="hero">
+      <section className="hero" id="hero">
         <div className="heroImgContainer">
           <div></div>
           {/* <img></img> */}
@@ -39,7 +39,7 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="aboutMe ">
+      <section className="aboutMe" id="aboutMe">
         <h2 className="sectionTitle">Sobre Mi</h2>
         <p className="description">Soy un desarrollador front-end enfocado en la construcción de experiencias web modernas, funcionales y bien estructuradas.Trabajo con Next.js y React, buscando siempre mejorar la calidad del código y aprovechar al máximo las herramientas del ecosistema.Me apasiona seguir aprendiendo, descubrir nuevas tecnologías y crecer con cada proyecto para alcanzar un desarrollo cada vez más profesional.</p>
         <div className="aboutMeInfoItemsContainer">
@@ -48,7 +48,7 @@ export function Home() {
           <InfoItem icon={Chat} title="Idiomas" description="Español" />
         </div>
       </section>
-      <section className="skills">
+      <section className="skills" id="skills">
         <h2 className="sectionTitle">Mis Habilidades y Herramientas</h2>
         <p className="skillsDescription">Tecnologías que uso para dar vida a mis ideas</p>
         <div className="skillsContainer">
@@ -60,7 +60,7 @@ export function Home() {
           <Skill icon={Boostrap} description={"Bootstrap"} />
         </div>
       </section>
-      <section className="contactMe">
+      <section className="contactMe" id="contactMe">
         <h2 className="sectionTitle">Contáctame</h2>
         <p className="description"></p>
         <div className="contactFormContainer">
@@ -85,6 +85,16 @@ export function Home() {
           <Mail width="2.9rem" height="2.9rem" />
         </a>
       </section>
+      <footer>
+        <p className="footerDevName">Rodrigo Cattebeke</p>
+        <div className="footerLinks">
+          <a href="#hero">Inicio</a>
+          <a href="#aboutMe">Sobre mi</a>
+          <a href="#skills">Habilidades</a>
+          <a href="#proyects">Mis proyectos</a>
+          <a href="#contact">Contáctame</a>
+        </div>
+      </footer>
     </>
   );
 }
