@@ -1,0 +1,24 @@
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 6rem;
+  background-color: var(--color-bg-secondary);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  aspect-ratio: 1/1;
+}
+
+.skillIcon {
+  width: fit-content;
+  height: auto;
+}
+
+.description {
+  width: fit-content;
+  font-size: 0.9rem;
+}
