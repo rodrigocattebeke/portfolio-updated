@@ -1,0 +1,15 @@
+.badge {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-bg-secondary);
+  border-radius: 0.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.badge:hover {
+  box-shadow: 0 0 10px -3px var(--color-accent);
+}
+
+.badge p {
+  color: var(--color-accent);
+}
