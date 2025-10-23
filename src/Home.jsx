@@ -10,11 +10,26 @@ import { Mail } from "./components/icons/Mail";
 import { NextJs } from "./components/icons/NextJs";
 import { Public } from "./components/icons/Public";
 import { Work } from "./components/icons/Work";
+import { ProyectCard } from "./components/proyectCard/ProyectCard";
 import { Button } from "./components/ui/button/Button";
 import { InfoItem } from "./components/ui/infoItem/InfoItem";
 import { Skill } from "./components/ui/skill/Skill";
 
 export function Home() {
+  // Proyects
+
+  const proyects = [
+    {
+      title: "ManduApp",
+      description: "ManduApp es una aplicación web creada con Next.js y React, diseñada para gestionar listas e ítems con estados pendientes, en proceso y completados. La autenticación de usuarios y el almacenamiento de datos se implementaron con Firebase, asegurando que cada usuario pueda guardar y acceder a sus listas de manera segura y sencilla.",
+      img: "src/assets/proyects/manduapp.png",
+      tools: ["Next.js", "Firebase", "Cloudinary", "Figma", "CSS", "Bootstrap (grid system)"],
+      proyectURL: "https://manduapp.netlify.app/",
+      githubURL: "https://github.com/rodrigocattebeke/manduApp",
+    },
+  ];
+
+  // Contact form
   const onSubmit = (e) => {
     e.preventDefault();
   };
@@ -57,6 +72,14 @@ export function Home() {
             <Skill icon={CSS} description={"CSS"} />
             <Skill icon={Boostrap} description={"Bootstrap"} />
           </div>
+        </div>
+      </section>
+      <section className="myProyects" id="proyects">
+        <h2 className="sectionTitle">Mis proyectos</h2>
+        <div className="proyectsContainer">
+          {proyects.map((p, i) => (
+            <ProyectCard title={p.title} description={p.description} img={p.img} tools={p.tools} proyectURL={p.proyectURL} githubURL={p.githubURL} key={i} />
+          ))}
         </div>
       </section>
       <section className="contactMe" id="contactMe">
