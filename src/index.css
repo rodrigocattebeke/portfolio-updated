@@ -65,7 +65,9 @@ section {
 .hero {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   height: 100%;
+  min-height: 500px;
 }
 
 .heroImgContainer {
@@ -122,10 +124,17 @@ section {
   margin-top: 1rem;
 }
 
-/*      Skills      */
+.aboutMeSkills {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
 .skillsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(6rem, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(6rem, max-content));
   justify-content: center;
   gap: 1rem;
 }

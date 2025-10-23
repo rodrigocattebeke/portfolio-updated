@@ -47,17 +47,16 @@ export function Home() {
           <InfoItem icon={Public} title="Ubicación" description="Paraguay" />
           <InfoItem icon={Chat} title="Idiomas" description="Español" />
         </div>
-      </section>
-      <section className="skills" id="skills">
-        <h2 className="sectionTitle">Mis Habilidades y Herramientas</h2>
-        <p className="skillsDescription">Tecnologías que uso para dar vida a mis ideas</p>
-        <div className="skillsContainer">
-          <Skill icon={NextJs} description="Next.js" />
-          <Skill icon={JavaScript} description="JavaScript" />
-          <Skill icon={Git} description={"Git"} />
-          <Skill icon={Figma} description={"Figma"} />
-          <Skill icon={CSS} description={"CSS"} />
-          <Skill icon={Boostrap} description={"Bootstrap"} />
+        <div className="aboutMeSkills" id="skills">
+          <p className="skillsDescription">Tecnologías que uso para dar vida a mis ideas</p>
+          <div className="skillsContainer">
+            <Skill icon={NextJs} description="Next.js" />
+            <Skill icon={JavaScript} description="JavaScript" />
+            <Skill icon={Git} description={"Git"} />
+            <Skill icon={Figma} description={"Figma"} />
+            <Skill icon={CSS} description={"CSS"} />
+            <Skill icon={Boostrap} description={"Bootstrap"} />
+          </div>
         </div>
       </section>
       <section className="contactMe" id="contactMe">
