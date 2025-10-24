@@ -79,8 +79,9 @@ export function Home() {
       <section className="myProyects" id="proyects">
         <h2 className="sectionTitle">Mis proyectos</h2>
         <div className="proyectsContainer">
+          {/* turn the card every 1 place */}
           {proyects.map((p, i) => (
-            <ProyectCard title={p.title} description={p.description} img={p.img} tools={p.tools} proyectURL={p.proyectURL} githubURL={p.githubURL} key={i} />
+            <ProyectCard title={p.title} description={p.description} img={p.img} tools={p.tools} proyectURL={p.proyectURL} githubURL={p.githubURL} reverse={i % 2 == 0 ? false : true} key={i} />
           ))}
         </div>
       </section>
