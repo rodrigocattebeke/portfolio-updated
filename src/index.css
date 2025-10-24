@@ -30,6 +30,10 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1,
@@ -136,7 +140,6 @@ section {
   flex-direction: column;
   width: 100%;
   gap: 1rem;
-  padding-top: 1rem;
 }
 
 .skillsContainer {
@@ -260,6 +263,11 @@ footer {
 /*      Media Queries     */
 
 @media screen and (min-width: 850px) {
+  body {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   /*    Hero    */
   .hero {
     flex-direction: row-reverse;
