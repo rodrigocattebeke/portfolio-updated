@@ -112,13 +112,23 @@ export function Home() {
       </section>
       <footer>
         <p className="footerDevName">Rodrigo Cattebeke</p>
-        <div className="footerLinks">
-          <a href="#hero">Inicio</a>
-          <a href="#aboutMe">Sobre mi</a>
-          <a href="#skills">Habilidades</a>
-          <a href="#proyects">Mis proyectos</a>
-          <a href="#contact">Contáctame</a>
-        </div>
+        <ul className="footerLinks">
+          <li>
+            <a href="#hero">Inicio</a>
+          </li>
+          <li>
+            <a href="#aboutMe">Sobre mi</a>
+          </li>
+          <li>
+            <a href="#skills">Habilidades</a>
+          </li>
+          <li>
+            <a href="#proyects">Mis proyectos</a>
+          </li>
+          <li>
+            <a href="#contact">Contáctame</a>
+          </li>
+        </ul>
       </footer>
     </>
   );
