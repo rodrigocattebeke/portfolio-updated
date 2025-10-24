@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Boostrap } from "./components/icons/Boostrap";
 import { Chat } from "./components/icons/Chat";
 import { CSS } from "./components/icons/CSS";
@@ -13,9 +14,26 @@ import { Work } from "./components/icons/Work";
 import { ProyectCard } from "./components/proyectCard/ProyectCard";
 import { Button } from "./components/ui/button/Button";
 import { InfoItem } from "./components/ui/infoItem/InfoItem";
+import { MenuModal } from "./components/ui/menuModal/MenuModal";
 import { Skill } from "./components/ui/skill/Skill";
+import { Menu } from "./components/icons/Menu";
 
 export function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Header modal links
+  const headerLinks = [
+    { title: "Inicio", href: "#hero" },
+    { title: "Sobre Mi", href: "#aboutMe" },
+    { title: "Habilidades", href: "#skills" },
+    { title: "Mis Proyectos", href: "#proyects" },
+    { title: "Contáctame", href: "#contactMe" },
+  ];
+
+  const onModalClose = () => {
+    setIsOpen(false);
+  };
+
   // Proyects
 
   const proyects = [
@@ -36,7 +54,29 @@ export function Home() {
 
   return (
     <>
-      <header></header>
+      <header>
+        <div className="headerExpanded">
+          <h2>Rodrigo Cattebeke</h2>
+          <ul>
+            {headerLinks.map((link, i) => (
+              <li>
+                <a href={link.href}>{link.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="headerMinimized">
+          <div
+            className="hamburguerButton"
+            onClick={() => {
+              setIsOpen(true);
+            }}
+          >
+            <Menu width="3rem" height="3rem" />
+          </div>
+          <MenuModal isOpen={isOpen} onClose={onModalClose} children={headerLinks} />
+        </div>
+      </header>
       <section className="hero" id="hero">
         <div className="heroImgContainer">
           <div></div>

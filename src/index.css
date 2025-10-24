@@ -25,6 +25,7 @@ body {
   background-color: var(--color-bg-primary);
   font-family: "Roboto", sans-serif;
   padding: 1rem;
+  padding-top: 0;
 }
 
 main {
@@ -45,6 +46,16 @@ p {
   margin: 0;
 }
 
+a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-text-primary-hover);
+}
+
 svg {
   fill: var(--color-accent);
   transition: fill 0.15s;
@@ -63,6 +74,54 @@ section {
   width: 100%;
   text-align: center;
   margin: 0;
+}
+
+/*      Header      */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.091);
+  z-index: 98;
+}
+
+.headerExpanded {
+  display: none;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+header li {
+  list-style: none;
+  height: fit-content;
+  font-size: 1.1rem;
+}
+
+.headerMinimized {
+  display: flex;
+}
+
+.hamburguerButton {
+  width: fit-content;
+  margin-right: auto;
+  height: fit-content;
+  cursor: pointer;
+  transition: fill 0.2s;
+}
+
+.hamburguerButton svg:hover {
+  fill: var(--color-accent-hover);
 }
 
 /*      Hero      */
@@ -256,22 +315,21 @@ footer {
   list-style: none;
 }
 
-.footerLinks a {
-  color: var(--color-text-primary);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.footerLinks a:hover {
-  color: var(--color-text-primary-hover);
-}
-
 /*      Media Queries     */
 
 @media screen and (min-width: 850px) {
   body {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  /*    Header    */
+  .headerExpanded {
+    display: flex;
+  }
+
+  .headerMinimized {
+    display: none;
   }
 
   /*    Hero    */
