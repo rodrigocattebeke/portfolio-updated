@@ -89,8 +89,8 @@ export function Home() {
           <p className="heroRole">Desarrollador Front-End | Transformando ideas en experiencias interactivas</p>
           <p className="heroDescription">Creo aplicaciones web modernas y responsivas usando React, Next.js y otras tecnologías actuales. Disfruto diseñando interfaces limpias y dando vida a las ideas con código.</p>
           <div className="heroButtonsContainer">
-            <Button text="Ver mis proyectos" fullWidth={true} href={"hasd"} />
-            <Button text="Contáctame" mode="secondary" fullWidth={true} />
+            <Button text="Ver mis proyectos" fullWidth={true} href={"#proyects"} />
+            <Button text="Contáctame" mode="secondary" fullWidth={true} href={"#contactMe"} />
           </div>
         </div>
       </section>
