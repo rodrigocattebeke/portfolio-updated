@@ -130,7 +130,8 @@ header li {
   flex-direction: column;
   gap: 2rem;
   height: 100%;
-  min-height: 500px;
+  min-height: 450px;
+  padding-top: 1.5rem;
 }
 
 .heroImgContainer {
