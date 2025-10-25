@@ -34,8 +34,8 @@ export const ProyectCard = ({ title, description, img, tools, proyectURL, github
           ))}
         </div>
         <div className={styles.buttonsContainer}>
-          <Button text="Ver proyecto" href={proyectURL} fullWidth={true} />
-          <Button text="Ver en GitHub" href={githubURL} mode="secondary" fullWidth={true} />
+          <Button text="Ver proyecto" href={proyectURL} fullWidth={true} target="_blank" />
+          <Button text="Ver en GitHub" href={githubURL} mode="secondary" fullWidth={true} target="_blank" />
         </div>
       </div>
     </div>
