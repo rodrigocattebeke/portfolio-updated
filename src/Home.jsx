@@ -22,7 +22,7 @@ export function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   // Header modal links
-  const headerLinks = [
+  const navLinks = [
     { title: "Inicio", href: "#hero" },
     { title: "Sobre Mi", href: "#aboutMe" },
     { title: "Habilidades", href: "#skills" },
@@ -58,7 +58,7 @@ export function Home() {
         <div className="headerExpanded">
           <h2>Rodrigo Cattebeke</h2>
           <ul>
-            {headerLinks.map((link, i) => (
+            {navLinks.map((link, i) => (
               <li>
                 <a href={link.href}>{link.title}</a>
               </li>
@@ -74,7 +74,7 @@ export function Home() {
           >
             <Menu width="3rem" height="3rem" />
           </div>
-          <MenuModal isOpen={isOpen} onClose={onModalClose} children={headerLinks} />
+          <MenuModal isOpen={isOpen} onClose={onModalClose} children={navLinks} />
         </div>
       </header>
       <section className="hero" id="hero">
@@ -153,21 +153,11 @@ export function Home() {
       <footer>
         <p className="footerDevName">Rodrigo Cattebeke</p>
         <ul className="footerLinks">
-          <li>
-            <a href="#hero">Inicio</a>
-          </li>
-          <li>
-            <a href="#aboutMe">Sobre mi</a>
-          </li>
-          <li>
-            <a href="#skills">Habilidades</a>
-          </li>
-          <li>
-            <a href="#proyects">Mis proyectos</a>
-          </li>
-          <li>
-            <a href="#contact">Contáctame</a>
-          </li>
+          {navLinks.map((link, i) => (
+            <li>
+              <a href={link.href}>{link.title}</a>
+            </li>
+          ))}
         </ul>
       </footer>
     </>
