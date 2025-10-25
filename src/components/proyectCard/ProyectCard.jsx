@@ -15,7 +15,6 @@ import styles from "./ProyectCard.module.css";
  */
 
 export const ProyectCard = ({ title, description, img, tools, proyectURL, githubURL, reverse = false }) => {
-  console.log(reverse);
   if (!title) return console.error("Se necesita pasar el título");
   if (!img) return console.error("Se necesita pasar el src de la imagen");
   if (!proyectURL) return console.error("Se necesita pasar la URL al proyecto");
