@@ -14,14 +14,14 @@ import styles from "./ProyectCard.module.css";
  * @returns
  */
 
-export const ProyectCard = ({ title, description, img, tools, proyectURL, githubURL, reverse = false }) => {
+export const ProyectCard = ({ title, description, img, tools, proyectURL, githubURL, reverse = false, className = "" }) => {
   if (!title) return console.error("Se necesita pasar el título");
   if (!img) return console.error("Se necesita pasar el src de la imagen");
   if (!proyectURL) return console.error("Se necesita pasar la URL al proyecto");
   if (!githubURL) return console.error("Se necesita pasar la URL al github");
 
   return (
-    <div className={`${styles.proyectCard} ${reverse ? styles.reverse : ""}`}>
+    <div className={`${styles.proyectCard} ${reverse ? styles.reverse : ""} ${className}`}>
       <div className={styles.imgWrapper}>
         <div className={styles.imgContainer}>{<img src={img} alt={`Imagen del proyecto ${title}`} />}</div>
       </div>
