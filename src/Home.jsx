@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Boostrap } from "./components/icons/Boostrap";
 import { Chat } from "./components/icons/Chat";
 import { CSS } from "./components/icons/CSS";
@@ -52,6 +52,26 @@ export function Home() {
     e.preventDefault();
   };
 
+  // Intersection observer
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-element, .proyectCard");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 } // 10% of the element
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <header>
@@ -94,17 +114,17 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="aboutMe" id="aboutMe">
+      <section className="aboutMe fade-element" id="aboutMe">
         <h2 className="sectionTitle">Sobre Mi</h2>
         <div className="aboutMeDescriptionWrapper">
           <p className="aboutMeDescription">Soy un desarrollador front-end enfocado en la construcción de experiencias web modernas, funcionales y bien estructuradas.Trabajo con Next.js y React, buscando siempre mejorar la calidad del código y aprovechar al máximo las herramientas del ecosistema.Me apasiona seguir aprendiendo, descubrir nuevas tecnologías y crecer con cada proyecto para alcanzar un desarrollo cada vez más profesional.</p>
           <div className="aboutMeInfoItemsContainer">
-            <InfoItem icon={Work} title="Experiencia" description="Trainee" />
-            <InfoItem icon={Public} title="Ubicación" description="Paraguay" />
-            <InfoItem icon={Chat} title="Idiomas" description="Español" />
+            <InfoItem icon={Work} title="Experiencia" description="Trainee" className="fade-element" />
+            <InfoItem icon={Public} title="Ubicación" description="Paraguay" className="fade-element" />
+            <InfoItem icon={Chat} title="Idiomas" description="Español" className="fade-element" />
           </div>
         </div>
-        <div className="aboutMeSkills" id="skills">
+        <div className="aboutMeSkills fade-element" id="skills">
           <p className="skillsDescription">Tecnologías que uso para dar vida a mis ideas</p>
           <div className="skillsContainer">
             <Skill icon={NextJs} description="Next.js" />
@@ -116,16 +136,16 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="myProyects" id="proyects">
+      <section className="myProyects " id="proyects">
         <h2 className="sectionTitle">Mis proyectos</h2>
         <div className="proyectsContainer">
           {/* turn the card every 1 place */}
           {proyects.map((p, i) => (
-            <ProyectCard title={p.title} description={p.description} img={p.img} tools={p.tools} proyectURL={p.proyectURL} githubURL={p.githubURL} reverse={i % 2 == 0 ? false : true} key={i} />
+            <ProyectCard title={p.title} description={p.description} img={p.img} tools={p.tools} proyectURL={p.proyectURL} githubURL={p.githubURL} reverse={i % 2 == 0 ? false : true} className="proyectCard" key={i} />
           ))}
         </div>
       </section>
-      <section className="contactMe" id="contactMe">
+      <section className="contactMe fade-element" id="contactMe">
         <h2 className="sectionTitle">Contáctame</h2>
         <p className="description"></p>
         <div className="contactFormContainer">
@@ -139,7 +159,7 @@ export function Home() {
           </form>
         </div>
       </section>
-      <section className="linksIcons">
+      <section className="linksIcons fade-element">
         <a href="https://github.com/rodrigocattebeke" rel="noopener" target="_blank">
           <Github width="2.2rem" height="2.2rem" />
         </a>
