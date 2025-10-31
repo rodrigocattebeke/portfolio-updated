@@ -37,8 +37,32 @@ export function Home() {
   };
 
   // Contact form
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": form.getAttribute("name"),
+          ...Object.fromEntries(data),
+        }).toString(),
+      });
+
+      if (response.ok) {
+        alert("Mensaje enviado correctamente!");
+        form.reset();
+      } else {
+        alert("Error al enviar el mensaje.");
+      }
+    } catch (error) {
+      alert("Error al enviar el mensaje.");
+      console.error(error);
+    }
   };
 
   // Intersection observer
@@ -139,7 +163,8 @@ export function Home() {
         <h2 className="sectionTitle">Contáctame</h2>
         <p className="description"></p>
         <div className="contactFormContainer">
-          <form className="contactForm" onSubmit={onSubmit}>
+          <form className="contactForm" name="contact" data-netlify="true" onSubmit={onSubmit}>
+            <input type="hidden" name="form-name" value="contact" />
             <input name="name" placeholder="Tu nombre" autoComplete="name"></input>
             <input name="email" placeholder="Tu email" autoComplete="email"></input>
             <textarea name="message" placeholder="Tu mensaje"></textarea>
