@@ -172,12 +172,19 @@ header li {
 }
 
 .heroImgContainer div {
-  background-color: gray;
+  position: relative;
   width: 70%;
-  max-width: 300px;
-  height: auto;
+  max-width: 400px;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(-120deg, var(--color-bg-secondary), var(--color-bg-secondary-hover));
+}
+
+.heroImgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .heroRole {
@@ -400,6 +407,11 @@ footer {
     margin-top: 0;
     padding: 0.5rem;
     box-sizing: border-box;
+  }
+
+  /*    My Proyects   */
+  .proyectsContainer {
+    gap: 4rem;
   }
 }
 
