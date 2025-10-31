@@ -17,6 +17,7 @@ import { InfoItem } from "./components/ui/infoItem/InfoItem";
 import { MenuModal } from "./components/ui/menuModal/MenuModal";
 import { Skill } from "./components/ui/skill/Skill";
 import { Menu } from "./components/icons/Menu";
+import { proyects } from "./constants/proyects";
 
 export function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,19 +34,6 @@ export function Home() {
   const onModalClose = () => {
     setIsOpen(false);
   };
-
-  // Proyects
-
-  const proyects = [
-    {
-      title: "ManduApp",
-      description: "ManduApp es una aplicación web creada con Next.js y React, diseñada para gestionar listas e ítems con estados pendientes, en proceso y completados. La autenticación de usuarios y el almacenamiento de datos se implementaron con Firebase, asegurando que cada usuario pueda guardar y acceder a sus listas de manera segura y sencilla.",
-      img: "src/assets/proyects/manduapp.png",
-      tools: ["Next.js", "Firebase", "Cloudinary", "Figma", "CSS", "Bootstrap (grid system)"],
-      proyectURL: "https://manduapp.netlify.app/",
-      githubURL: "https://github.com/rodrigocattebeke/manduApp",
-    },
-  ];
 
   // Contact form
   const onSubmit = (e) => {
@@ -79,7 +67,7 @@ export function Home() {
           <h2>Rodrigo Cattebeke</h2>
           <ul>
             {navLinks.map((link, i) => (
-              <li>
+              <li key={i}>
                 <a href={link.href}>{link.title}</a>
               </li>
             ))}
@@ -99,8 +87,9 @@ export function Home() {
       </header>
       <section className="hero" id="hero">
         <div className="heroImgContainer">
-          <div></div>
-          {/* <img></img> */}
+          <div>
+            <img src="src/assets/images/rodrigo_cattebeke.png"></img>
+          </div>
         </div>
         <div className="heroTextContainer">
           <h1 className="heroTitle">
@@ -174,7 +163,7 @@ export function Home() {
         <p className="footerDevName">Rodrigo Cattebeke</p>
         <ul className="footerLinks">
           {navLinks.map((link, i) => (
-            <li>
+            <li key={i}>
               <a href={link.href}>{link.title}</a>
             </li>
           ))}
