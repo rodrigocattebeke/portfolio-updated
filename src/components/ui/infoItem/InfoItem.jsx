@@ -1,4 +1,4 @@
-import styles from "./infoItem.module.css";
+import styles from "./InfoItem.module.css";
 /**
  *
  * @param {Object} props
