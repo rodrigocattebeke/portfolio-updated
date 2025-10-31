@@ -18,6 +18,7 @@ import { MenuModal } from "./components/ui/menuModal/MenuModal";
 import { Skill } from "./components/ui/skill/Skill";
 import { Menu } from "./components/icons/Menu";
 import { proyects } from "./constants/proyects";
+import HeroImg from "@/assets/images/rodrigo_cattebeke.png";
 
 export function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,7 +89,7 @@ export function Home() {
       <section className="hero" id="hero">
         <div className="heroImgContainer">
           <div>
-            <img src="src/assets/images/rodrigo_cattebeke.png"></img>
+            <img src={HeroImg}></img>
           </div>
         </div>
         <div className="heroTextContainer">
