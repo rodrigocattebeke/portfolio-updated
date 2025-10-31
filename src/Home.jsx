@@ -19,9 +19,13 @@ import { Skill } from "./components/ui/skill/Skill";
 import { Menu } from "./components/icons/Menu";
 import { proyects } from "./constants/proyects";
 import HeroImg from "@/assets/images/rodrigo_cattebeke.png";
+import { Toast } from "./components/ui/toast/Toast";
 
 export function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const [toastMode, setToastMode] = useState("success");
+  const [showToast, setShowToast] = useState(false);
 
   // Header modal links
   const navLinks = [
@@ -54,15 +58,23 @@ export function Home() {
       });
 
       if (response.ok) {
-        alert("Mensaje enviado correctamente!");
+        setToastMessage("Mensaje enviado correctamente!");
+        setShowToast(true);
+        setToastMode("success");
         form.reset();
       } else {
-        alert("Error al enviar el mensaje.");
+        setToastMessage("Error al enviar el mensaje.");
+        setShowToast(true);
+        setToastMode("error");
       }
     } catch (error) {
-      alert("Error al enviar el mensaje.");
+      setToastMessage("Error al enviar el mensaje.");
+      setShowToast(true);
+      setToastMode("error");
       console.error(error);
     }
+
+    setTimeout(() => setShowToast(false), 4000);
   };
 
   // Intersection observer
@@ -173,6 +185,12 @@ export function Home() {
             </div>
           </form>
         </div>
+        {/* Toast */}
+        {showToast && (
+          <div className={"toastContainer"}>
+            <Toast message={toastMessage} mode={toastMode} />
+          </div>
+        )}
       </section>
       <section className="linksIcons fade-element">
         <a href="https://github.com/rodrigocattebeke" rel="noopener" target="_blank">

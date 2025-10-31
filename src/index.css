@@ -318,6 +318,15 @@ textarea {
   margin-top: 1rem;
 }
 
+.toastContainer {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: fit-content;
+  animation: fadeIn 1s ease-in-out;
+  z-index: 99;
+}
+
 /**   Links icons   **/
 .linksIcons {
   display: flex;
