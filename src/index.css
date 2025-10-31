@@ -1,17 +1,29 @@
 :root {
+  /* Accents */
   --color-accent: #26c6b9;
   --color-accent-active: #23a99e;
   --color-accent-hover: #23b7aa;
   --color-accent-secondary: #d97dff;
+
+  /* Backgrounds */
+
   --color-bg-primary: #05111f;
   --color-bg-secondary: #0b1a2a;
   --color-bg-secondary-active: #293644;
   --color-bg-secondary-hover: #192a3d;
   --color-border: #123143;
+
+  /* Statuses */
+  --color-status-success: rgb(62, 229, 62);
+  --color-status-error: rgb(255, 49, 49);
+
+  /* Text */
   --color-text-primary: #e0f7f4;
   --color-text-primary-hover: #bec8c7;
   --color-text-secondary: #a0dad4;
   --color-text-disabled: #969696;
+
+  /* Transitions */
   --transition-short: 1s;
   --transition-medium: 1.5s;
   --transition-long: 2s;
