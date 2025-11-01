@@ -196,7 +196,7 @@ export function Home() {
         <a href="https://github.com/rodrigocattebeke" rel="noopener" target="_blank">
           <Github width="2.2rem" height="2.2rem" />
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/rodrigo-cattebeke-56837123b" rel="noopener" target="_blank">
           <Linkedin width="2.2rem" height="2.2rem" />
         </a>
         <a href="mailto:rodrigocattebekedev@gmail.com?subject=Trabajo&body=Hola,%20me%20estoy%20contactando%20para%20un%20trabajo.">
