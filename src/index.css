@@ -223,6 +223,7 @@ header li {
 
 .heroButtonsContainer {
   display: flex;
+  flex-direction: column;
   gap: 0.55rem;
   margin-top: 1rem;
 }
@@ -375,6 +376,11 @@ footer {
 }
 
 /*      Media Queries     */
+@media screen and (min-width: 400px) {
+  .heroButtonsContainer {
+    flex-direction: row;
+  }
+}
 
 @media screen and (min-width: 850px) {
   body {
