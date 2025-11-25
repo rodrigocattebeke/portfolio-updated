@@ -145,7 +145,7 @@ export function Home() {
         <div className="aboutMeDescriptionWrapper">
           <p className="aboutMeDescription">Soy un desarrollador front-end enfocado en la construcción de experiencias web modernas, funcionales y bien estructuradas.Trabajo con Next.js y React, buscando siempre mejorar la calidad del código y aprovechar al máximo las herramientas del ecosistema. Me apasiona seguir aprendiendo, descubrir nuevas tecnologías y crecer con cada proyecto para alcanzar un desarrollo cada vez más profesional.</p>
           <div className="aboutMeInfoItemsContainer">
-            <InfoItem icon={Work} title="Experiencia" description="Trainee" className="fade-element" />
+            <InfoItem icon={Work} title="Experiencia" description="Junior" className="fade-element" />
             <InfoItem icon={Public} title="Ubicación" description="Paraguay" className="fade-element" />
             <InfoItem icon={Chat} title="Idiomas" description="Español" className="fade-element" />
           </div>
